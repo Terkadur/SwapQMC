@@ -55,7 +55,7 @@ const Aidx = collect(1:partitionSize)
 
 const extsys = ExtendedSystem(system, Aidx, subsysOrdering=false)
 
-path = "./tarek_data/wtf"
+path = "./tarek_data"
 filename = "Pq2_N$(sum(system.N))_U$(system.U)_beta$(system.β)_seed$(seed)_smaller_use.jld"
 
 @time run_replica_sampling_gs(extsys, qmc, φ₀, path, filename)
