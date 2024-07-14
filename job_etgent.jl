@@ -59,6 +59,6 @@ const Aidx = collect(1:partitionSize)
 
 const extsys = ExtendedSystem(system, Aidx, subsysOrdering=false)
 
-path = "./tarek_data/wtf"
+path = "./tarek_data"
 filename = "EtgEnt_N$(sum(system.N))_U$(system.U)_lambda$(λₖ)_beta$(system.β)_seed$(seed)_smaller_dont.jld"
 @time run_incremental_sampling_gs(extsys, qmc, φ₀, λₖ, Nₖ, path, filename)
