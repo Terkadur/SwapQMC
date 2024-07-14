@@ -80,7 +80,7 @@ function local_update!_symmetric(
         system, replica, walker, α[1, σj], j, ridx,
         direction=direction, forceSymmetry=forceSymmetry
     )
-    println(r)
+    
     saveRatio && push!(walker.tmp_r, r)
     # accept ratio
     u = useHeatbath ? real(r) / (1 + real(r)) : real(r)
